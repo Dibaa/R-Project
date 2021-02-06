@@ -1,0 +1,350 @@
+<!doctype html>
+<!-- 
+* Bootstrap Simple Admin Template
+* Version: 2.0
+* Author: Alexis Luna
+* Copyright 2020 Alexis Luna
+* Website: https://github.com/alexis-luna/bootstrap-simple-admin-template
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dashboard | Bootstrap Simple Admin Template</title>
+    <link href="vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/master.css" rel="stylesheet">
+    <link href="vendor/chartsjs/Chart.min.css" rel="stylesheet">
+    <link href="vendor/flagiconcss/css/flag-icon.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    {{ headContent() }}
+    {{ bootstrapLib() }}
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar" class="active">
+            <div class="sidebar-header">
+                <h2>M1TDSI 2019-2020</h2>
+            </div>
+            <ul class="list-unstyled components text-secondary">
+                <li>
+                    <a href=""><i class="fas fa-home"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#file"><i class="fas fa-file-alt"></i> Upload Fichier</a>
+                </li>
+                <li>
+                    <a href="#tableau"><i class="fas fa-table"></i> Visualistaion</a>
+                </li>
+                <li>
+                    <a href="#regression"><i class="fas fa-chart-bar"></i> Regression Linéaire</a>
+                </li>
+                <li>
+                    <a href="#graph"><i class="fas fa-icons"></i> Représentation Graphique</a>
+                </li>
+              
+            </ul>
+        </nav>
+        <div id="body" class="active">
+            <nav class="navbar navbar-expand-lg navbar-white bg-white">
+                <button type="button" id="sidebarCollapse" class="btn btn-light"><i class="fas fa-bars"></i><span></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   
+                </div>
+            </nav>
+            <div class="content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 page-header">
+                            <div class="row">
+                                
+                            </div>
+                                <div id= "file" class="page-pretitle">Overview</div>
+                                <h2 class="page-title">Dashboard</h2>
+                               
+                                
+                        </div>
+                    </div>
+                    <hr>
+                   
+                    <div class="row" style="background-color: 03a9fc;">
+                        <div class="col-sm-6 col-md-6 col-lg-4 mt-4">
+                            
+                                <div id =" import" class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="teal fas file-upload"></i>
+                                               
+                                
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                {{uiOutput('file1')}}
+                                                {{uiOutput('head')}}
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <hr />
+                                        <div class="stats">
+                                        </div>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="olive fas fa-money-bill-alt"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                {{uiOutput('sep')}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                           
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                            
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="violet fas fa-eye"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                {{uiOutput('quote')}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-2 mt-2">
+                            
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                            <div class="icon-big text-center">
+                                                <i class="orange fas fa-envelope"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <div class="detail">
+                                                {{uiOutput('dis')}}
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                           
+                        </div>
+                    </div>
+                    
+                        <div id=" tableau" class="col-md-12">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="head">
+                                        <h5 class="mb-0">Base de données</h5>
+                                    </div>
+                                    <div class="canvas-wrapper">
+                                        {{dataTableOutput('table')}}
+
+                                        <!--<canvas class="chart" id="trafficflow"></canvas>-->
+                                    </div>
+                                    <div class="ui hidden divider"></div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        </div>
+                        <div class=" container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="content">
+                                        <div class="head">
+                                            <h5 class="mb-0">Analyse descriptive des variables téléchargées</h5>
+                                            <p class="text-muted">Description complète de variables</p>
+                                        </div>
+                                        <div class="canvas-wrapper bg-lighter-grey grey">
+                                            <!--{{verbatimTextOutput("summary")}}-->
+                                            {{uiOutput('menu1')}}
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="graph" class="col-md-12">
+                                <div class="row">
+                                <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="content">
+                                                <div class="head">
+                                                    <h3 class="mb-0">ACP</h3> 
+                                                    <p class="text-muted">Représentation graphique sur les variables de l'ACP</p>
+                                                </div>
+                                                <div class="canvas-wrapper">
+                                                    {{plotOutput('plot1')}}
+    
+                                                    <!--<canvas class="chart" id="trafficflow"></canvas>-->
+                                                </div>
+                                                <div class="ui hidden divider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                            <div class="content">
+                                                <div class="head">
+                                                    <h3 class="mb-0">ACP</h3>
+                                                    <p class="text-muted">Représentation graphique sur les individus</p>
+                                                </div>
+                                                <div class="canvas-wrapper">
+                                                    {{plotOutput('plot2')}}
+                                                    <!--<canvas class="chart" id="sales"></canvas>-->
+                                                    
+                                                </div>
+                                                <div class="ui hidden divider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                            </div>
+                            <div class=" container">
+                                <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="card">
+                                    <div id= "regression" class="content">
+                                        <div class="head">
+                                            <h4 class="mb-0">Droite de regresion </h5> 
+                                            <p class="text-muted">Chois des paramétres </p>
+                                        </div>
+                                        <div class="canvas-wrapper bg-lighter-grey grey">
+                                            {{uiOutput('x')}} 
+                                            {{uiOutput('y')}} 
+                                            {{uiOutput('z')}}
+                                            {{verbatimTextOutput('regression')}}
+                                            {{'select'}}
+                                               
+                                            <!--<canvas class="chart" id="trafficflow"></canvas>-->
+                                        </div>
+                                        <div class="ui hidden divider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+
+                                <div class="card">
+                                    <div class="content">
+                                        <div class="head">
+                                            <h4 class="mb-0">Droite de regresion </h5> 
+                                            <p class="text-muted">Chois des paramétres </p>
+                                        </div>
+                                        <div class="canvas-wrapper bg-lighter-grey grey">
+                                            
+                                            {{plotOutput('plot5')}}         
+                                            <!--<canvas class="chart" id="trafficflow"></canvas>-->
+                                        </div>
+                                        <div class="ui hidden divider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                           </div>
+                            
+                        
+                          
+                    
+                   
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="blue large-icon mb-2 fas fa-thumbs-up"></i>
+                                            <h4 class="mb-0">+21,900</h4>
+                                            <p class="text-muted">FACEBOOK PAGE LIKES</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="orange large-icon mb-2 fas fa-reply-all"></i>
+                                            <h4 class="mb-0">+22,566</h4>
+                                            <p class="text-muted">INSTAGRAM FOLLOWERS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="grey large-icon mb-2 fas fa-envelope"></i>
+                                            <h4 class="mb-0">+15,566</h4>
+                                            <p class="text-muted">E-MAIL SUBSCRIBERS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card">
+                                <div class="content">
+                                    <div class="row">
+                                        <div class="dfd text-center">
+                                            <i class="olive large-icon mb-2 fas fa-dollar-sign"></i>
+                                            <h4 class="mb-0">+98,601</h4>
+                                            <p class="text-muted">TOTAL SALES</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/chartsjs/Chart.min.js"></script>
+    <script src="js/dashboard-charts.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
